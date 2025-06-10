@@ -36,11 +36,20 @@ h1 {
     line-height: 1.2;
 }
 
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
 /* Main Content */
-/* Styling articles */
+/* Styling all articles */
 article {
     border: 1px solid #b0bec5;
     box-shadow: 2px 2px 5px #b0bec5;
+}
+
+img {
+    margin: 3rem;
 }
 
 /* Footer */
