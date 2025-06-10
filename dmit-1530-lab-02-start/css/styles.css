@@ -106,6 +106,29 @@ footer p {
 }
 
 /* Media Queries */
-/**Media Query for medium-sized screens or higher*/
-/*  
-@media screen and (min-width: 640px){ 
+/**Styling for medium-size screen*/
+@media screen and (min-width: 600px) {
+  /* First article is full width  */
+  /* 2nd-3rd articles are 50% width with gap*/
+  /* 4th-8th articles are 33% with gap*/
+  .flex-container article:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+/**Media Query for larger screens*/
+@media screen and (min-width: 900px) {
+  /* First article is full width  */
+  /* The rest of the articles: four-column grid */
+  .flex-container article {
+  }
+}
+
+/**Media Query for the largest screens*/
+@media screen and (min-width: 1200px) {
+  /* First article is full width  */
+  /* The rest of the articles: four-column grid */
+  .flex-container article {
+}
