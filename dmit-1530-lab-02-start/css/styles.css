@@ -25,26 +25,37 @@ box-shadow: 2px 2px 5px #b0bec5;
 }
 
 body {
-    color: #263238;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--color-dark-blue-grey);
+    background-color: var(--color-off-white);
+    margin: 3rem;
 }
 
 /* Styling Typography */
 h1 {
-    font-size: 5rem;
-    font-weight: bold;
+    font-size: 3rem;
     line-height: 1.2;
     text-align: center;
+    padding: 1rem;
+    margin: 1rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
+    margin: 1rem;
 }
 
 p {
-    font-size: 1rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.75rem;
+    margin: 1rem;
+}
+
+a {
+    font-size: 0.75rem;
+    font-weight: bold; 
+    color: var(--color-anchor-tags);
+    margin: 1rem;
 }
 
 /* Main Content */
@@ -52,15 +63,15 @@ p {
 article {
     border: 1px solid #b0bec5;
     box-shadow: 2px 2px 5px #b0bec5;
+    padding: 1rem;
+    margin: 1rem;
 }
 
-a {
-    font-weight: bold; 
-    color: var(--color-anchor-tags);
+article img {
 }
 
 img {
-    margin: 3rem;
+    
 }
 
 /* Styling footer */
