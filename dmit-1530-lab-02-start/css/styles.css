@@ -29,16 +29,22 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Typography */
+/* Styling Typography */
 h1 {
-    font-size: 3rem;
-    font-weight: 300;
+    font-size: 5rem;
+    font-weight: bold;
     line-height: 1.2;
+    text-align: center;
 }
 
 h2 {
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Main Content */
@@ -48,15 +54,22 @@ article {
     box-shadow: 2px 2px 5px #b0bec5;
 }
 
+a {
+    font-weight: bold; 
+    color: var(--color-anchor-tags);
+}
+
 img {
     margin: 3rem;
 }
 
-/* Footer */
-
-footer * {
+/* Styling footer */
+footer {
     font-size: 0.825em;
     text-align: center;
+}
+footer h2 {
+    font-weight: bold;
 }
 
 /* Media Queries */
