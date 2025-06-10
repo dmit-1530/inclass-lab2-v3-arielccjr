@@ -94,41 +94,51 @@ footer p {
 .flex-container {
     display: flex;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .flex-container article {
 /* Styling with 2 columns for all except the 1st */
-    flex: 1 1 calc((100% / 2) - (2rem - 1));
+    width: calc((100% / 2) - (3rem / 4));
 }
 
 .flex-container article:first-child {
-    flex: 1 1 100%;
+    width: 100%; 
 }
 
 /* Media Queries */
 /**Styling for medium-size screen*/
 @media screen and (min-width: 600px) {
-  /* First article is full width  */
-  /* 2nd-3rd articles are 50% width with gap*/
-  /* 4th-8th articles are 33% with gap*/
-  .flex-container article:first-child {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-  }
+    /* First article is full width  */
+    /* 2nd-3rd articles are 50% width with gap*/
+    /* 4th-8th articles are 33% with gap*/
+    .flex-container article:first-child {
+        width: calc((100% / 4) - ( 3rem / 4));
+        display: flex;
+        gap: 1rem;
+    }
+    
+    .flex-container article {
+        width: calc((100% / 4) - ( 3rem / 4));
+        display: flex;
+        gap: 1rem;
+    }
 }
 
 /**Media Query for larger screens*/
 @media screen and (min-width: 900px) {
-  /* First article is full width  */
-  /* The rest of the articles: four-column grid */
-  .flex-container article {
+    /* First article is full width  */
+    /* The rest of the articles: four-column grid */
+    .flex-container article {
+        width: calc((100% / 4) - ( 3rem / 4));
   }
 }
 
 /**Media Query for the largest screens*/
 @media screen and (min-width: 1200px) {
-  /* First article is full width  */
-  /* The rest of the articles: four-column grid */
-  .flex-container article {
+    /* First article is full width  */
+    /* The rest of the articles: four-column grid */
+    .flex-container article {
+        width: calc((100% / 4) - ( 3rem / 4));
+    }
 }
