@@ -110,17 +110,20 @@ footer p {
 /**Styling for medium-size screen*/
 @media screen and (min-width: 600px) {
     /* First article is full width  */
-    /* 2nd-3rd articles are 50% width with gap*/
-    .flex-container article:second-child {
-        width: calc(100% / 2) - 1;
+    .flex-container article:first-child {
         display: flex;
+        width: calc(100% / 2) - 1;
         gap: 1rem;
+    }
+    /* 2nd-3rd articles are 50% width with gap*/
+    .flex-container article {
+        
     }
     
     /* 4th-8th articles are 33% with gap*/
     .flex-container article {
-        width: calc(100% / 4) - 3;
         display: flex;
+        width: calc(100% / 4) - 3;
         gap: 1rem;
     }
 }
@@ -128,11 +131,13 @@ footer p {
 /**Media Query for larger screens*/
 @media screen and (min-width: 900px) {
     /* First article is full width  */
-    /* The rest of the articles: four-column grid */
-    .flex-container article {
+    .flex-container article:first-child {
+        display: flex;
         width: calc(100% / 4) - 3;
         gap: 1rem;
-  }
+    }
+    /* The rest of the articles: four-column grid */
+
 }
 
 /**Media Query for the largest screens*/
