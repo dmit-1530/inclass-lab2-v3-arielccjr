@@ -67,7 +67,6 @@ a {
 article {
     border: 1px solid #b0bec5;
     box-shadow: 2px 2px 5px #b0bec5;
-    margin: 0.5rem;
 }
 
 /* Styling footer */
@@ -89,7 +88,6 @@ footer p {
     margin: unset;
 }
 
-
 /* Styling mobile first... */
 .flex-container {
     display: flex;
@@ -97,57 +95,87 @@ footer p {
     gap: 1rem;
 }
 
-.flex-container article {
-/* Styling with 2 columns for all except the 1st */
-    width: calc((100% / 2) - (3rem / 4));
-}
-
+/* First article is full width  */
 .flex-container article:first-child {
     width: 100%; 
+}
+
+.flex-container article {
+/* Styling with 2 columns for all except the 1st */
+    width: calc((100% / 2) - 1rem);
 }
 
 /* Media Queries */
 /**Styling for medium-size screen*/
 @media screen and (min-width: 600px) {
     /* First article is full width  */
-    .flex-container article:first-child {
+    .flex-container > article:first-child {
         display: flex;
-        width: calc(100% / 2) - 1;
-        gap: 1rem;
-    }
-    /* 2nd-3rd articles are 50% width with gap*/
-    .flex-container article {
-        
+        width: 100%;
+        align-items: center;
     }
     
+    .flex-container > article:nth-child(1) img,
+    .flex-container > article:nth-child(1) .card-copy {
+        width: 50%
+    }    
+
+    /* 2nd-3rd articles are 50% width with gap*/
+    .flex-container > article:nth-child(2),
+    .flex-container > article:nth-child(3) {
+        width: 50% - 1rem;
+    }
+   
     /* 4th-8th articles are 33% with gap*/
-    .flex-container article {
-        display: flex;
-        width: calc(100% / 4) - 3;
-        gap: 1rem;
+    .flex-container > article:nth-child(4),
+    .flex-container > article:nth-child(5),
+    .flex-container > article:nth-child(6),
+    .flex-container > article:nth-child(7),
+    .flex-container > article:nth-child(8),
+    .flex-container > article:nth-child(9) {
+        width: calc((100% / 3) - 1rem);
     }
 }
 
 /**Media Query for larger screens*/
 @media screen and (min-width: 900px) {
     /* First article is full width  */
-    .flex-container article:first-child {
+    .flex-container > article:first-child {
         display: flex;
-        width: calc(100% / 4) - 3;
-        gap: 1rem;
+        width: 100%;
+        align-items: center;
     }
+    
     /* The rest of the articles: four-column grid */
-
+    .flex-container > article:nth-child(2),
+    .flex-container > article:nth-child(3),
+    .flex-container > article:nth-child(4),
+    .flex-container > article:nth-child(5),
+    .flex-container > article:nth-child(6),
+    .flex-container > article:nth-child(7),
+    .flex-container > article:nth-child(8),
+    .flex-container > article:nth-child(9) {
+        width: calc((100% / 4) - 1rem);
+    }
 }
 
-/**Media Query for the largest screens*/
 @media screen and (min-width: 1200px) {
     /* First article is full width  */
-    /* The rest of the articles: four-column grid */
-    .flex-container article:first-child {
-        width: 100%; 
+    .flex-container > article:first-child {
+        display: flex;
+        width: 100%;
+        align-items: center;
     }
-    .flex-container article:first-child {
-        width: calc(100% / 4) - 3;
+    
+    /* The rest of the articles: four-column grid */
+    .flex-container > article:nth-child(2),
+    .flex-container > article:nth-child(3),
+    .flex-container > article:nth-child(4),
+    .flex-container > article:nth-child(5),
+    .flex-container > article:nth-child(6),
+    .flex-container > article:nth-child(7),
+    .flex-container > article:nth-child(8),
+    .flex-container > article:nth-child(9) {
+        width: calc((100% / 4) - 1rem);
     }
 }
